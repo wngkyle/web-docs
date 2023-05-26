@@ -108,6 +108,17 @@ console.log(newExample);
 let slicedExample = newExample.slice(1,3);
 console.log(slicedExample);
 
+// .sort() sorts an array alphabetically
+console.log(cars);
+cars.sort();
+console.log(cars);
+
+// .reverse() reverses the elements in an array
+cars.reverse();
+console.log(cars);
+
+newExample.sort();
+console.log(newExample);
 
 
 
