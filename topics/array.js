@@ -117,6 +117,14 @@ console.log(cars);
 cars.reverse();
 console.log(cars);
 
+// .sort() allows you to pass in a compare function to define an alternative sort order
+// The compare function should return a negative, zero, or positive value depending on the arguments
+// If result is negative, 'a' is sorted before 'b'
+// If result is positive, 'b' is sorted before 'a'
+// If result is zero, no changes are done with the sort order of the two values
+let num = [2,5,3,21,0,5,43,3,83,4,55];
+num.sort(function(a,b) {return a-b});
+
 
 
 
