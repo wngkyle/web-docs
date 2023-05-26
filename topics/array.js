@@ -83,11 +83,31 @@ let cars3 = cars.concat(cars2);
 console.log(cars3);
 
 // .flat() flattens an array, reduces dimensions by creating a new array
-let example = [[1,2],[3,4],[4,5]];
+let example = [[1,2],[3,4],[5,6]];
 let newExample = example.flat();
 console.log(example);
 console.log(newExample);
 
 // .splice() used to modify the contents of an array by removing the existing elements and/or by adding new elements
-// ,splice(index, remove_count)
+// .splice(index, remove_count, item_list)
+// First parameter defined where to splice in
+// Second parameter defined how many element to remove
+// Third and rest of the parameters defined new items to add
+newExample.splice(2,1,"Ford", "BMW");
+console.log(newExample);
+
+// Using .splice() to remove element by leaving the third parameter empty
+newExample.splice(0,1); // remove the first element in the array
+console.log(newExample);
+
+// .slice() for slicing
+// .slice(begin, end)
+// First parameter is the begin index
+// Second parameter is the end index
+// NOTE: last index is not included, this method creates a new array
+let slicedExample = newExample.slice(1,3);
+console.log(slicedExample);
+
+
+
 
