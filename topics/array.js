@@ -117,8 +117,6 @@ console.log(cars);
 cars.reverse();
 console.log(cars);
 
-newExample.sort();
-console.log(newExample);
 
 
 
