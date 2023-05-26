@@ -122,9 +122,28 @@ console.log(cars);
 // If result is negative, 'a' is sorted before 'b'
 // If result is positive, 'b' is sorted before 'a'
 // If result is zero, no changes are done with the sort order of the two values
-let num = [2,5,3,21,0,5,43,3,83,4,55];
+let num = [2,5,3,21,0,5.5,43,3,83,4,55];
 num.sort(function(a,b) {return a-b});
+console.log(num);
 
+// Sorting an array in random order
+num.sort(function(){return 0.5 - Math.random()});
+console.log(num);
+// The Fisher Yates shuffle Method for random order
+for (let i = num.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i+1));
+    let k = num[i];
+    num[i] = num[j];
+    num[j] = k;
+}
+console.log(num);
 
+// Finding maximum in an array
+// Math.max.apply()
+console.log(Math.max.apply(null, num));
+
+// Finding minimum in an array
+// Math.min.apply()
+console.log(Math.min.apply(null, num));
 
 

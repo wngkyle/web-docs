@@ -34,9 +34,8 @@ function createCircle(radius, location) {
 
 let circle1 = createCircle(3, {x:1, y:4})
 console.log("Circle1 radius:", circle1.radius);
-console.log("Circle1 location:", circle1.location)
+console.log("Circle1 location:", circle1.location);
 circle1.draw();
-console.log(circle1.location)
 
 function createCircle(radius, location) {
     return {
@@ -49,9 +48,9 @@ function createCircle(radius, location) {
     };
 }
 
-const circle2 = createCircle(1, {x:2, y:6});
-console.log(circle2.location)
-
+let circle2 = createCircle(1, {x:2, y:6});
+console.log("Circle2 radius:", circle2.radius);
+console.log("Circle2 location:", circle2.location);
 
 // Constructor Function
 function Circle(radius, location) {
