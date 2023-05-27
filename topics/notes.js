@@ -31,7 +31,6 @@ console.log(e4);
 // Primitives are copied by their value
 // Objects are copied by their reference
 
-
 let e5 = 10;
 let e6 = {value: 10};
 
