@@ -1,5 +1,5 @@
 class Cars {
-    constructor(brand, year) {
+    constructor(brand, year=2000) {
         this._brand = brand;
         this._year = year;
     }
@@ -76,12 +76,39 @@ console.log(myModel.present());
 // Even if the getter and setter are methods, you do not use 
 // parentheses when you want to get the property value
 
-myModel.carBrand = "BMW";
-myModel.carModel = "X5";
+myModel.brand = "BMW";
+myModel.model = "X5";
 console.log(myModel.present());
 
 myCar.test(); // Calling the test() function in Cars since myCar is an 
               // instance of Cars
 myModel.test(); // Calls the test() function in Model since myModel is 
                 // an instance of class Model 
+
+// Hoisting 
+// Unlike functions, and other javascript declarations, class 
+// declarations are not hoisted, meaning you must declare a class 
+// before you can use it
+
+// Static Method
+// Static methods are define on the class itself
+// You cannot call a static method on an object, only on object class
+
+class Cars2 {
+    constructor(brand, year=2000) {
+        this._brand = brand;
+        this._year = year;
+    }
+    static show(car) {
+        return "The car brand is " + car._brand;
+    }
+}
+
+let myCar2 = new Cars2("BMW");
+
+// Correct
+console.log(Cars2.show(myCar2));
+
+// Incorrect, will raise an error
+// console.log(myCar2.show());
 
