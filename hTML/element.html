@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <p id="intro">Find HTMl elements</p>
+    <p id="demo"></p>
+
+    <p class="intro">Find HTML elements by CSS Selectors</p>
+    <p class="intro">QuerySelectorAll() method</p>
+    <!--If you want to find all HTML elements that match a specified CSS selector (id, class names, types, attributes, values of attributes, etc), use the querySelectorAll() method.-->
+
+    <script>
+        let element = document.getElementById('intro');
+        document.getElementById('demo').innerHTML = "Using by ID method: " + element.innerHTML;
+        // Using getElementById to find the element
+        // If the element is found, the method will return the element as an object
+        // If the element is not found, element will contain null
+
+        element = document.getElementsByTagName("p");
+        document.getElementById('demo').innerHTML = "Using by tag name method: " + element[0].innerHTML;
+        // Using getElementByTagName to find the element
+
+        let x = document.querySelectorAll("p.intro");
+        document.getElementById("demo").innerHTML = "Using querySelectorAll() method: " + x[0].innerHTML;
+        
+    </script>
+</html>

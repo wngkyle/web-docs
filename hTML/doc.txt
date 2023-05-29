@@ -1,0 +1,24 @@
+- The HTML DOM document object is the owner of all other objects in your web page
+- The document object represents your web page
+- If you want to access any element in an HTML page, you start with accessing the document object
+
+Finding HTML elements
+- document.getElementById(id)
+- document.getElementsByTagName(name)
+- document.getElementsByClassName(name)	
+
+Changing HTML elements
+- element.innerHTML = new html content
+- element.attribute = new value
+- element.style.property = new style
+- element.setAttribute(attribute, value)
+
+Adding and deleting elements
+- document.createElement(element)
+- document.removeChild(element)
+- document.appendChild(element)
+- document.replaceChild(new, old)
+- document.write(text)
+
+Adding events handlers
+- document.getElementById(id).onclick = function(){code}
