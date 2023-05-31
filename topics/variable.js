@@ -1,3 +1,10 @@
+// Variables can be declared and initialized without the var or 
+// let keywords. However, a value must be assigned to a variable 
+// declared without the var keyword.
+
+// The variables declared without the var keyword become global 
+// variables, irrespective of where they are declared.
+
 // let / var / const
 function start() {
     for (var i = 0; i < 5; i++) {
