@@ -29,6 +29,12 @@ root.render(
     <Counter />
   </React.StrictMode>
 );
+// React.StrictMode is a developer tool used to identify potential issues in web application
+// It activates additional deprecation checks and warnings
+// It gives visual feedback (warning/error messages) whenever the React rules and suggested practices
+// are not followed is one of the reasons for its popularity
+// The React StrictMode Component, like the React Fragment, does not render any visible UI.
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
