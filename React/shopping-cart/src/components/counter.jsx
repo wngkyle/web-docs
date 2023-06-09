@@ -2,13 +2,13 @@ import React, { Component } from "react";
 
 class Counter extends Component {
   state = {
-    count: 0,
-    tags: [],
+    value: this.props.value
   };
+  // Instead of setting 'count' to 0, we set it to this.props.value so the value is updated accordingly
   // ["tag1", "tag2", "tag3"]
 
-  constructor() {
-    super(); // this calls the constructor of the parent class (Component)
+  constructor(props) {
+    super(props); // this calls the constructor of the parent class (Component)
     console.log("Constructor", this);
     // Using the constructor now we have access to our object
 
@@ -17,8 +17,15 @@ class Counter extends Component {
   }
 
   render() {
+    console.log('props', this.props);
+    // Props is a plain javascript object that includes all the attributes that we set in 'counter' component
+    // HOWEVER, 'key' attribute will not be printed because 'key' is a special attribute use for uniquely identifying elements
+    // Any children wrapped around by the tags/component will also be shown when printing out 'this.props'
+
     return (
       <>
+        {/* <h4>Counter #{this.props.id}</h4>  =>  this works the same as below {this.props.children}, method 1 is preferred */}
+        {this.props.children}
         <span className={this.getBadgeClass()}>{this.formatCount()}</span>
         <button
           onClick={() => {this.handleIncrement2(this)}}
@@ -51,17 +58,17 @@ class Counter extends Component {
   }
 
   handleIncrement() {
-    this.setState({ count: this.state.count + 1 });
+    this.setState({ value: this.state.value + 1 });
     // You pass an object into setState
-    console.log("Increment Clicked", this.state.count);
+    console.log("Increment Clicked", this.state.value);
   }
   // Whenever you want to pass in an argument to an event handler just pass in an arrow function in render()
   // Like what is done for onClick above
   handleIncrement2 = product => {
-    this.setState({ count: this.state.count + 1});
+    this.setState({ value: this.state.value + 1});
     // You pass an object into setState
-    console.log("Increment Clicked", this.state.count);
-    console.log(product);
+    console.log("Increment Clicked", this.state.value);
+    console.log("Product", product);
   };
   // You cannot use keyword 'this' in event handler
   // Event handlers don't have access to 'this'
@@ -80,13 +87,13 @@ class Counter extends Component {
 
   getBadgeClass() {
     let classes = "badge m-2 badge-";
-    classes += this.state.count === 0 ? "warning" : "primary";
+    classes += this.state.value === 0 ? "warning" : "primary";
     return classes;
   }
 
   formatCount() {
-    if (this.state.count === 0) return "Zero";
-    return this.state.count;
+    if (this.state.value === 0) return "Zero";
+    return this.state.value;
   }
 }
 
