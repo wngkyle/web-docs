@@ -4,7 +4,9 @@ import App from './App'
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.css';
-import Counter from './components/counter';
+// import FirstPart from './src/components/FirstPart';
+// import Counter from './src/components/Counter';
+import Counters from './components/Counters';
 
 // *** 
 // Virtual DOM (Document Object Model) is a lightweight, in-memory
@@ -26,7 +28,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
-    <Counter />
+    <Counters />
   </React.StrictMode>
 );
 // React.StrictMode is a developer tool used to identify potential issues in web application
