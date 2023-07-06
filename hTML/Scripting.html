@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <script>
+        function textChecker() {
+            var textField1 = document.getElementById('textField1')
+            if (textField1.value == "") {
+                alert("Please type in the field");
+            } else {
+                alert("You entered: " + textField1.value)
+            }
+        }
+    </script>
+    <body>
+        <input type="date" id="textField1">
+        <input type="button" onClick="textChecker()" value="Submit">
+    </body>
+</html>
